@@ -1,0 +1,70 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>100</x><y>190</y><w>380</w><h>160</h></coordinates><panel_attributes>Sitio
+--
+- nombre
+--
++ Sitio(nombre: String)
++ addUsuario(usuario: Usuario) : void
++ addCategoria(categoria: Categoria) : void
++ suscribirseACurso(idUsuario: String, idCurso: String): Resultado
+- buscarUsuario(id: String) : Usuario
+- buscarCurso(id: String) : Curso
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>190</y><w>230</w><h>160</h></coordinates><panel_attributes>Usuario
+--
+- id: String
+- nombre: String
+- mail: String
+- esBecado: boolean
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>240</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=0..n
+- usuarios</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>410</y><w>230</w><h>160</h></coordinates><panel_attributes>Categoria
+--
+- id: String
+- nombre: String
+--
++ Categoria(id: String, nombre: String)
++ addCurso(curso: Curso) : void
++ buscarCurso(id: String) : Curso</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>310</y><w>220</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=1..n
+- categorias</panel_attributes><additional_attributes>200;180;100;180;100;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>410</y><w>340</w><h>250</h></coordinates><panel_attributes>Curso
+--
+- id: String
+- titulo: String
+- precio: double
+- valoracion: int
+- titulo: String
+- cantBecados: int
+__- MAX_BECADOS: int__
+--
++ Curso(id: String, titulo: String, precio: double, valoracion: int, creador: Usuario)
++ addUsuario(usuario: Usuario) : void
++ addLeccion(leccion: Leccion): void
++ usuarioSuscripto(usuario: Usuario): boolean
++ aceptaBecado() : boolean
++ esAutor(usuario: Usuario) : boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>490</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=1..n
+- cursos</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>260</y><w>310</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- creador</panel_attributes><additional_attributes>10;20;290;20;290;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>650</y><w>230</w><h>120</h></coordinates><panel_attributes>Leccion
+--
+- nombre: String
+- duracion: int
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>580</y><w>240</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1..n
+- lecciones</panel_attributes><additional_attributes>10;70;10;20;220;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>640</y><w>110</w><h>140</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoLeccion
+--
+TEXTO
+VIDEO
+RECURSO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>690</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- tipo</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>220</y><w>350</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- inscriptos</panel_attributes><additional_attributes>10;20;330;20;330;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>450</y><w>110</w><h>140</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Resultado
+--
+CURSO_INEX
+USUARIO_INEX
+YA_SUSCRIPTO
+ES_AUTOR
+MAX_BECADOS
+SUSCRIPTO_OK</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>340</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element></diagram>

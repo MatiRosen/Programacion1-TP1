@@ -1,0 +1,51 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>50</x><y>120</y><w>210</w><h>70</h></coordinates><panel_attributes>Instituto
+--
+- nombre: String
+--
++ Instituto(nombre: String)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>130</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=1..n
+- carreras</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>100</y><w>350</w><h>100</h></coordinates><panel_attributes>Carrera
+--
+- nombre: String
+--
++ Carrera(nombre: String)
++ getInformeMaxMaterias(): Informe
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>960</x><y>120</y><w>260</w><h>100</h></coordinates><panel_attributes>Alumno
+--
+- nombre: String
+- mail: String
+--
++ Alumno(nombre: String, mail: String)
++ getCantMaterias(): int
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>140</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=1..n
+- alumnos</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>350</y><w>350</w><h>170</h></coordinates><panel_attributes>Informe
+--
+- cantMaterias: int
+--
++ Informe(cantMaterias: int)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>190</y><w>30</w><h>180</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>960</x><y>340</y><w>260</w><h>160</h></coordinates><panel_attributes>Materia
+--
+- nombre: String
+- cuatrimestre: String
+--
++ Materia(nombre: String, cuatrimestre: String,  estadoMateria EstadoMateria)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>210</y><w>90</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=0..n
+- cursadas</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1020</x><y>600</y><w>140</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+EstadoMateria
+--
+EN_CURSO
+REPROBADA
+APROBADA</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>490</y><w>70</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=1
+- estado</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>210</y><w>390</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- alumnos</panel_attributes><additional_attributes>350;10;350;90;10;90;10;140</additional_attributes></element></diagram>
