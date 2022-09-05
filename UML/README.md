@@ -1,1 +1,1 @@
-Para abrir este archivo, importarlo desde: https://www.umletino.com/umletino.html
+Para abrir estos archivos, importarlo desde: https://www.umletino.com/umletino.html
