@@ -1,0 +1,27 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>120</x><y>130</y><w>350</w><h>170</h></coordinates><panel_attributes>Droide
+--
+- enServicio: boolean
+--
++ Droide(enServicio: boolean)
++ registrarDroide(droide: Droide): void
++ autoRepararse(): Resultado
+- puedeReemplazarPieza(piezaRota: Pieza): boolean
+- buscarPieza(nombrePieza: String , droide: Droide): Pieza
+- eliminarPiezaOperativa(pieza: Pieza): void
++ agregarPiezaFuncional(pieza: Pieza): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>130</y><w>180</w><h>170</h></coordinates><panel_attributes>Pieza
+--
+- nombre: String
+--
++ Pieza(nombre: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>250</y><w>350</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=0..n
+- piezasOperativas</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>220</y><w>350</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=0..n
+- piezasNoOperativas</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>150</y><w>240</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- droidesRegistrados</panel_attributes><additional_attributes>10;10;110;10;110;50;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>380</y><w>200</w><h>170</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Resultado
+--
+COMPLETAMENTE_OPERATIVO
+REPARACION_PARCIAL
+REPARACION_IMPOSIBLE</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>290</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element></diagram>
