@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Cliente {
 
     private String nombre, apellido, dirección, email, teléfono;
-    private ArrayList<Pedido> pedidos;
+    private ArrayList<Pedido> historialPedidos;
 
     public Cliente(String nombre, String apellido, String dirección, String email, String teléfono) {
         this.nombre = nombre;
@@ -13,13 +13,13 @@ public class Cliente {
         this.dirección = dirección;
         this.email = email;
         this.teléfono = teléfono;
-        this.pedidos = new ArrayList<>();
+        this.historialPedidos = new ArrayList<>();
     }
 
     public boolean addPedido(Pedido pedido){
         boolean sePudo = false;
         if (pedido.getEstadoPedido() != EstadoPedido.PENDIENTE || this.getPedidoPendiente() == null){
-            this.pedidos.add(pedido);
+            this.historialPedidos.add(pedido);
             sePudo = true;
         }
 
@@ -41,8 +41,8 @@ public class Cliente {
         Pedido pedido = null;
         int contador = 0;
 
-        while (contador < pedidos.size() && pedido == null){
-            Pedido pedidoAux = this.pedidos.get(contador);
+        while (contador < historialPedidos.size() && pedido == null){
+            Pedido pedidoAux = this.historialPedidos.get(contador);
             if (pedidoAux.getEstadoPedido() == EstadoPedido.PENDIENTE){
                 pedido = pedidoAux;
             } else{

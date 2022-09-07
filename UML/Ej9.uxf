@@ -1,0 +1,42 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>140</x><y>210</y><w>270</w><h>180</h></coordinates><panel_attributes>Aplicacion
+--
+- nombre: String
+--
++ Aplicacion(nombre: String)
++ borrarUsuario(nombre: String): Usuario 
+- buscarusuario(nombre: String): Usuario </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>120</y><w>270</w><h>180</h></coordinates><panel_attributes>Artista
+--
+- nombre: String
+- id: String
+--
++ Artista(nombre: String, id: String)
++ mostrarDuracionPromedio(): String 
++ esFanDestacado(usuario: Usuario): boolean 
++ borrarUsuario(usuario: Usuario): void 
++ primeras5Canciones():  ArrayList&lt;Cancion&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>350</y><w>270</w><h>110</h></coordinates><panel_attributes>Usuario
+--
+- nombre: String
+--
++ Usuario(nombre: String, estadoUsuario: EstadoUsuario)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>200</y><w>190</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- artistas</panel_attributes><additional_attributes>170;10;80;10;80;80;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>320</y><w>190</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- usuarios</panel_attributes><additional_attributes>170;100;80;100;80;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1000</x><y>230</y><w>250</w><h>130</h></coordinates><panel_attributes>Cancion
+--
+- nombre: String
+- id: String
+- segundos: int
+--
++ Cancion(id: String, nombre: String, segundos: int)
++ dioLike(usuario: Usuario): boolean 
++ borrarUsuario(usuario: Usuario): void </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>210</y><w>190</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1..n
+- canciones</panel_attributes><additional_attributes>170;90;60;90;60;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>290</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>570</y><w>170</w><h>110</h></coordinates><panel_attributes>EstadoUsuario
+--
+HABILITADO
+PRUEBA_GRATIS
+SUSPENDIDO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>450</y><w>70</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- estado</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>350</y><w>320</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- usuariosLike</panel_attributes><additional_attributes>10;70;300;70;300;10</additional_attributes></element></diagram>

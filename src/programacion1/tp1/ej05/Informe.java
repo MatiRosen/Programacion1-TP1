@@ -6,7 +6,6 @@ public class Informe {
 
     private ArrayList<InformeParcial> informesParciales;
 
-
     public Informe(){
         this.informesParciales = new ArrayList<>();
     }

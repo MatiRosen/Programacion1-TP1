@@ -1,0 +1,31 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>30</x><y>150</y><w>400</w><h>160</h></coordinates><panel_attributes>Carrera
+--
+- nombre: String
+__-MAX_POR_LISTA: int__
+--
++ Carrera(nombre: String)
++ obtenerCandidatos(promedioMinimo: double): ArrayList&lt;Candidato&gt; 
+- cumpleCondiciones(alumno: Alumno, promedio: double): boolean </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>150</y><w>240</w><h>160</h></coordinates><panel_attributes>Alumno
+--
+- nombre: String
+- mail: String
+--
++ Alumno(nombre: String, mail: String)
++ tieneCincoAprobadasMin(): boolean
++ obtenerPromedio(): double
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>230</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=0..n
+- alumnos</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>430</y><w>240</w><h>80</h></coordinates><panel_attributes>Candidato
+--
+- nombre: String
+- mail: String
+--
++ Candidato(nombre: String, mail: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>300</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>410</y><w>160</w><h>160</h></coordinates><panel_attributes>Materia
+--
+- nombre: String
+- notaFinal: double
+--
++ Materia(nombre: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>300</y><w>150</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=0..n
+- materiasAprobadas</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element></diagram>
