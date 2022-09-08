@@ -11,7 +11,18 @@ public class Tablero {
     }
 
     public Llave devolverLlave(String patente){
-        return null;
+        Llave llave = null;
+        int contador = 0;
+        while (contador < this.llaves.size() && llave == null){
+            Llave llaveAux = this.llaves.get(contador);
+            if (llaveAux.getPatenteVehiculo().equals(patente)){
+                llave = llaveAux;
+            } else {
+                contador++;
+            }
+        }
+
+        return llave;
     }
 
 

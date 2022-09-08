@@ -63,7 +63,7 @@ public class Garaje {
         boolean autorizada = false;
         int contador = 0;
 
-        while (contador < vehiculosEstacionados.size() && !autorizada){
+        while (contador < this.vehiculosEstacionados.size() && !autorizada){
             Vehiculo vehiculo = vehiculosEstacionados.get(contador);
             autorizada = vehiculo.personaAutorizada(dni);
             contador++;

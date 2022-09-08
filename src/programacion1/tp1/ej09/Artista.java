@@ -53,4 +53,8 @@ public class Artista {
 
         return primerasCanciones;
     }
+
+    public void addCancion(Cancion cancion){
+        this.canciones.add(cancion);
+    }
 }

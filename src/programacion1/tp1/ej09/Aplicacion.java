@@ -17,10 +17,13 @@ public class Aplicacion {
     public Usuario borrarUsuario(String nombre){
         Usuario usuario = buscarusuario(nombre);
 
-        usuarios.remove(usuario);
-        for (Artista artista : this.artistas){
-            artista.borrarUsuario(usuario);
+        if (usuario != null){
+            usuarios.remove(usuario);
+            for (Artista artista : this.artistas){
+                artista.borrarUsuario(usuario);
+            }
         }
+
 
         return usuario;
     }

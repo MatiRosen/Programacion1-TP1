@@ -7,4 +7,9 @@ public class Llave {
     public Llave(String patenteVehiculo){
         this.patenteVehiculo = patenteVehiculo;
     }
+
+
+    public String getPatenteVehiculo() {
+        return patenteVehiculo;
+    }
 }
