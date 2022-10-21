@@ -1,0 +1,16 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>170</x><y>140</y><w>970</w><h>300</h></coordinates><panel_attributes>Ej 4
+--
+A) TelefonoMovil tm &lt;- new Dispositivo() Erroneo
+Este es erroneo ya que TelefonoMovil es un dispositivo, pero un dispositivo no es necesariamente un TelefonoMovil. 
+ Por lo tanto va a dar error, primero porque habría que castear, y segundo, si se castea, el Dispositivo no es un TelefonoMovil por lo que daría error de casteo. 
+Además, si Dispositivo es una clase abstracta no se la puede instanciar directamente. 
+
+B) Electrodomestico e &lt;- new Licuadora() Correcto
+C) Publicacion p &lt;- new Publicacion() Correcto
+A menos que sea abstracta, en ese caso, no se puede instanciar.
+
+D) Motocicleta m &lt;- new Bicicleta() Erroneo
+Al ser los 2 transportes, yo creo que ambos deben ser hijos de la misma clase, sin embargo, probablemente no tengan
+una relación padre/hijo entre ellos, sino que son clases "hermanas", y por lo tanto no se pueden castear.
+
+E) LocalComercial lc &lt;- new Inmueble() Erroneo. Idem al A.</panel_attributes><additional_attributes></additional_attributes></element></diagram>

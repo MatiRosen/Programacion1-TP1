@@ -1,0 +1,75 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>510</x><y>50</y><w>250</w><h>170</h></coordinates><panel_attributes>EstacionDePeaje
+--
+- id: String
+- descripcion: String
+--
++ EstacionDePeaje(String, String)
+_+ dameHoraActual(): int_
+//Subrayado porque es static final al ser de clase...
++ cabinasConEfectivo() : ArrayList&lt;Cabina&gt;
++ promedioDemora(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>50</y><w>230</w><h>160</h></coordinates><panel_attributes>Cabina
+--
+- numId: int
+_- AUMENTO_HORA_PICO: double_
+--
++ Cabina(int)
++ cobrar(Vehiculo): double
+- esHoraPico(int): boolean
+- aplicarDescuentos(double): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>100</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=1..n
+- cabinas</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>50</y><w>200</w><h>120</h></coordinates><panel_attributes>Empresa
+--
+
+--
++ Empresa()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>90</y><w>230</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=1..n
+- estaciones</panel_attributes><additional_attributes>210;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>290</y><w>180</w><h>120</h></coordinates><panel_attributes>/MedioDePago/
+--
+- descripcion: String
+- descuento: int
+--
++ MedioDePago(String, int)
++ getDescuento() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>990</x><y>200</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- medioDePago</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>660</y><w>180</w><h>120</h></coordinates><panel_attributes>Sube
+--
+_- DESCUENTO: int_
+--
++ Sube(String, int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>660</y><w>240</w><h>120</h></coordinates><panel_attributes>Pase
+--
+_- DESCUENTO_MUCHA_DEMORA: int_
+_- DESCUENTO_POCA_DEMORA: int_
+--
++ Pase(String, int)
++ getDescuento() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1110</x><y>660</y><w>180</w><h>120</h></coordinates><panel_attributes>Efectivo
+--
+_- DESCUENTO: int_
+--
++ Efectivo(String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>470</y><w>260</w><h>120</h></coordinates><panel_attributes>/MedioDePagoConDemora/
+--
+- diasDemora: int
+--
++ MedioDePagoConDemora(String, int, int)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>400</y><w>210</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>190;10;190;40;10;40;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>580</y><w>160</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;140;50;10;50;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>580</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>400</y><w>180</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;120;160;120;160;260</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>220</y><w>180</w><h>80</h></coordinates><panel_attributes>Vehiculo
+--
+- patente: String
+--
++ Vehiculo(String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>530</y><w>180</w><h>120</h></coordinates><panel_attributes>CategoriaAuto
+--
+_- TARIFA_BASE: double_
+--
++ CategoriaAuto()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>530</y><w>180</w><h>120</h></coordinates><panel_attributes>CategoriaMoto
+--
+_- TARIFA_BASE: double_
+--
++ CategoriaMoto()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>530</y><w>180</w><h>120</h></coordinates><panel_attributes>CategoriaCamion
+--
+_- TARIFA_BASE: double_
+--
++ CategoriaCamion()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>470</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>470</y><w>200</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>180;10;180;30;10;30;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>470</y><w>200</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30;180;30;180;60</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>200</y><w>580</w><h>90</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;70;560;70;560;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>380</y><w>190</w><h>100</h></coordinates><panel_attributes>/Categoria/
+--
+- tarifaBase: double
+--
++ Categoria(double)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>290</y><w>90</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- categoria</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element></diagram>

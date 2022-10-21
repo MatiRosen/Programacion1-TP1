@@ -1,0 +1,55 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>130</x><y>120</y><w>320</w><h>110</h></coordinates><panel_attributes>Software
+--
+
+--
++ procesar(): void
++ programasPorDebajoDe(double): ArrayList&lt;Programa&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>70</y><w>270</w><h>190</h></coordinates><panel_attributes>Programa
+--
+- id: String
+- nombre: String
+- nombreResponsable: String
+- pasoPruebas: boolean
+--
++ Programa(String, String, String, boolean)
++ indiceCalidad(): double
++ mostrarDetalleDeMetodo(String): void
+- buscarMetodo(String): Metodo
++ listadoFuentesMayoresAlPromedio(): ArrayList&lt;Fuente&gt;
+- obtenerPromedioIndices(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>340</y><w>160</w><h>100</h></coordinates><panel_attributes>/Fuente/
+--
+- nombre: String
+- ubicacion: String
+--
++ Fuente(String, String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>250</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- fuentes</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>490</y><w>230</w><h>130</h></coordinates><panel_attributes>FuenteDeLenguajeDeProgramacion
+--
+
+--
++ FuenteDeLenguajeDeProgramacion(String, String)
++ indiceCalidad(): double
++ buscarMetodo(String): Metodo</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>490</y><w>220</w><h>130</h></coordinates><panel_attributes>FuenteDeLenguajeDeMarcado
+--
+- tamaño: int
+--
++ FuenteDeLenguajeDeMarcado(String, String, int)
++ indiceCalidad(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>690</y><w>230</w><h>150</h></coordinates><panel_attributes>Metodo
+--
+- nombre: String
+- cantParametros: int
+- cantInstrucciones: int
+- cantRamificaciones: int
+--
++ Metodo(String, int, int, int)
++ indiceCalidad(): double
++ mostrarDetalles(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>610</y><w>90</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- metodos</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>430</y><w>170</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;150;40;150;60</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>430</y><w>130</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;110;40;10;40;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>960</x><y>240</y><w>170</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Interfaz&gt;&gt;
+/Calificable/
+--
+
+--
+/+ indiceCalidad(): double/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>160</y><w>230</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>210;80;210;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>340</y><w>280</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>260;10;260;60;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>340</y><w>430</w><h>460</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>410;10;410;440;10;440</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>150</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- programas</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element></diagram>

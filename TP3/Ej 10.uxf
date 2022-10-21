@@ -1,0 +1,55 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>60</x><y>140</y><w>270</w><h>150</h></coordinates><panel_attributes>Puerto
+--
+_- VALOR_BASE: double_
+--
++ Puerto()
++ alquilar(Barco) : boolean
+- calcularPrecio(Barco): double
++ barcosConAlquilerMayorA(double) : int
++ barcoConMayorConsumo() : BarcoDeportivo</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>260</y><w>230</w><h>170</h></coordinates><panel_attributes>/Barco/
+--
+- matricula: String
+- eslora: double
+- año: int
+- nombreDueño: String
+- adicional: double
+--
++ Barco(String, double, int, String)
+/+ getAdicional() : double/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>140</y><w>180</w><h>150</h></coordinates><panel_attributes>Amarra
+--
+- numero: int
+- ubicacion: String
+- disponible: boolean
+--
++ Amarra(int, String)
++ alquilar(Barco) : boolean
+- puedeAlquilar() : boolean
+- estaDisponible(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>180</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..n
+- amarras</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>520</y><w>180</w><h>120</h></coordinates><panel_attributes>Velero
+--
+- cantMastiles: int
+--
++ Velero(String, double, int, String, int)
++ getAdicional() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>520</y><w>180</w><h>130</h></coordinates><panel_attributes>BarcoDeportivo
+--
+- potenciaMotor: int
+- factorAerodinamico: int
+_- INDICE_POTENCIA: double_
+--
++ BarcoDeportivo(String, double, int, String, int, int)
++ getAdicional() : double
++ calcularConsumo(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>520</y><w>180</w><h>120</h></coordinates><panel_attributes>Yate
+--
+- cantCamarotes: int
+--
++ Yate(String, double, int, String, int)
++ getAdicional() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>420</y><w>220</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;200;60;200;100</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>420</y><w>180</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;160;60;10;60;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>420</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>280</y><w>210</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=0..1
+- barco</panel_attributes><additional_attributes>190;90;10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>280</y><w>570</w><h>150</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;130;550;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>710</y><w>180</w><h>120</h></coordinates><panel_attributes>BarcoDeportivoDeLujo
+--
+
+--
++ BarcoDeportivo(String, double, int, String, int, int)
++ getAdicional() : double
++ calcularConsumo(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>640</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element></diagram>
