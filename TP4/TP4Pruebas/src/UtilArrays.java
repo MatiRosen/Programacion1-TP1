@@ -53,52 +53,52 @@ public class UtilArrays {
 	
 	public static void mostrarUnion(char[] cjto1, char[] cjto2) {
 		System.out.print(cjto1);
-		for (int i = 0; i < cjto2.length; i++) {
+		for (char c : cjto2) {
 			boolean repetido = false;
 			int j = 0;
 			while (!repetido && j < cjto1.length) {
-				if (cjto2[i] == cjto1[j]) {
+				if (c == cjto1[j]) {
 					repetido = true;
 				}
 				j++;
 			}
-			
+
 			if (!repetido) {
-				System.out.print(cjto2[i]);
+				System.out.print(c);
 			}
 		}
 	}
 	
 	public static void mostrarInterseccion(char[] cjto1, char[] cjto2) {
-		for (int i = 0; i < cjto1.length; i++) {
+		for (char c : cjto1) {
 			boolean repetido = false;
 			int j = 0;
 			while (!repetido && j < cjto2.length) {
-				if (cjto1[i] == cjto2[j]) {
+				if (c == cjto2[j]) {
 					repetido = true;
 				}
 				j++;
 			}
-			
+
 			if (repetido) {
-				System.out.print(cjto1[i]);
+				System.out.print(c);
 			}
 		}
 	}
 	
 	public static void mostrarDiferencia(char[] cjto1, char[] cjto2) {
-		for (int i = 0; i < cjto1.length; i++) {
+		for (char c : cjto1) {
 			boolean repetido = false;
 			int j = 0;
 			while (!repetido && j < cjto2.length) {
-				if (cjto1[i] == cjto2[j]) {
+				if (c == cjto2[j]) {
 					repetido = true;
 				}
 				j++;
 			}
-			
+
 			if (!repetido) {
-				System.out.print(cjto1[i]);
+				System.out.print(c);
 			}
 		}
 	}
@@ -108,7 +108,7 @@ public class UtilArrays {
 		UtilArrays.mostrarDiferencia(cjto1, cjto2);
 		UtilArrays.mostrarDiferencia(cjto2, cjto1);
 		System.out.println();
-		// Manera 2
+		// Manera 2 (ES HORRIBLE, NO HACER!)
 		int total = cjto1.length + cjto2.length;
 		for (int i = 0; i < total; i++) {
 			int j = 0;
@@ -138,6 +138,28 @@ public class UtilArrays {
 					System.out.print(cjto2[i - cjto1.length]);
 
 				}
+			}
+		}
+		//Manera 3
+		System.out.println();
+		char[] cjtoAux = new char[cjto1.length + cjto2.length];
+		for (int i = 0; i < cjto1.length; i++){
+			cjtoAux[i] = cjto1[i];
+		}
+		for (int i = 0; i < cjto2.length; i++){
+			cjtoAux[cjto1.length + i] = cjto2[i];
+		}
+		for (int i = 0; i < cjtoAux.length; i++){
+			boolean repetido = false;
+			int j = 0;
+			while (j < cjtoAux.length && !repetido){
+				if (i != j){
+					if (cjtoAux[i] == cjtoAux[j]) repetido = true;
+				}
+				j++;
+			}
+			if (!repetido){
+				System.out.print(cjtoAux[i]);
 			}
 		}
 	}

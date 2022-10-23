@@ -18,8 +18,8 @@ public class Test {
 			
 			baraja.agregarCarta(new Carta(i - 12*(palo.ordinal()), palo), i-1);
 		}
-		baraja.agregarCarta(new Carta(5, Palo.BASTO), 4);
-		baraja.agregarCarta(new Carta(5, Palo.ORO), 16);
+		baraja.agregarCarta(new Carta(12, Palo.ORO), 11);
+		baraja.agregarCarta(new Carta(12, Palo.BASTO), 23);
 		baraja.imprimirCartas();
 		System.out.println(baraja.estaOrdenada());
 	}
