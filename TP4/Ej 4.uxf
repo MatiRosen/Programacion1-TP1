@@ -1,0 +1,32 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>140</x><y>210</y><w>240</w><h>150</h></coordinates><panel_attributes>Empresa
+--
+
+--
++ recaudacionTotal(): double
++ cantVecesRecorrida(Estacion): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>210</y><w>180</w><h>150</h></coordinates><panel_attributes>Reserva
+--
+- codigo: String
+- cantPersonas: int
+_- PRECIO_POR_ESTACION: 50_
+_- DESCUENTO: 0.2_
+--
++ recaudacion(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>500</y><w>180</w><h>150</h></coordinates><panel_attributes>Recorrido
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>500</y><w>180</w><h>150</h></coordinates><panel_attributes>Estacion
+--
++ BUENOS_AIRES
++ LUJAN
++ MERCEDES
++ SUIPACHA
++ CHIVILCOY
++ ALBERTI
++ BRAGADO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>550</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1= 1
+- estacionDeDestino</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>590</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1= 1
+- estacionDePartida</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>270</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1= 1..n
+- reservas</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>350</y><w>90</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1= 1
+- recorrido</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element></diagram>

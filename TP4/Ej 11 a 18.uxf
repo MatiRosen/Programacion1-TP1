@@ -1,0 +1,13 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>440</x><y>250</y><w>370</w><h>200</h></coordinates><panel_attributes>UtilArrays
+--
+
+--
+_+ mostrarSinRepetidos(char[]): void_
+_+ esPalindromo(char[]): boolean_
+_+ invertir(char[]): void_
+_+ rotar1(char[]): void_
+_+ mostrarUnion(char[], char[]): void_
+_+ mostrarInterseccion(char[], char[]): void_
+_+ mostrarDiferencia(char[], char[]): void_
+_+ mostrarDiferenciaSimetrica(char[], char[]): void_
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
