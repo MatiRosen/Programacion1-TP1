@@ -1,0 +1,40 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>170</x><y>200</y><w>250</w><h>150</h></coordinates><panel_attributes>Estacionamiento
+--
+_- AUTOS_POR_PISO: 6_
+_- PISOS: 8_
+--
++ retirar(int): Automovil
+- existeUbicacion(int, int): boolean
+- generarRegistro(Automovil): void
+- esDeudor(Automovil): boolean
++ autosMasMorososPorPiso(): Automovil[]
+- obtenerMesesDeuda(Automovil): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>230</y><w>170</w><h>100</h></coordinates><panel_attributes>Automovil
+--
+- patente: String
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>270</y><w>260</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1= PISOS * AUTOS_POR_PISO
+- autos[][]</panel_attributes><additional_attributes>240;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>450</y><w>170</w><h>130</h></coordinates><panel_attributes>Fecha
+--
+
+--
++ Fecha(int, int, int)
+_+ hoy(): Fecha_
++ getDia(): int
++ getMes(): int
++ getAnio(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>320</y><w>110</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- fechaIngreso</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>230</y><w>170</w><h>100</h></coordinates><panel_attributes>Pago
+--
+- monto: double
+- dniPersona: int
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>270</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=12
+- pagosMensuales</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>450</y><w>190</w><h>100</h></coordinates><panel_attributes>Registro
+--
+- patente: String
+--
++ Registro(String, Fecha)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>340</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1= 1..n
+- registros</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>480</y><w>260</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- fechaRetiro</panel_attributes><additional_attributes>240;20;10;20</additional_attributes></element></diagram>
