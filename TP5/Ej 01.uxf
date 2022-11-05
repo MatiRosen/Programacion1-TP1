@@ -1,0 +1,31 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>210</y><w>180</w><h>120</h></coordinates><panel_attributes>Empleado
+--
+
+--
++ cantDVDsRayados(PilaDVDs): int
++ paginasPromedio(PilaLibros): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>150</y><w>180</w><h>120</h></coordinates><panel_attributes>PilaLibros
+--
+
+--
++ push(Libro): void
++ peek(): Libro
++ pop(): Libro</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>210</y><w>160</w><h>70</h></coordinates><panel_attributes>lt=&lt;..
+
+</panel_attributes><additional_attributes>140;10;90;10;90;50;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>320</y><w>180</w><h>120</h></coordinates><panel_attributes>PilaDVDs
+--
+
+--
++ push(DVD): void
++ peek(): DVD
++ pop(): DVD
++ isEmpty(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>290</y><w>160</w><h>120</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>140;100;90;100;90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>150</y><w>180</w><h>120</h></coordinates><panel_attributes>Libro
+--
+- ISBN: String
+- cantPaginas: int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>320</y><w>180</w><h>120</h></coordinates><panel_attributes>DVD
+--
+- marca: String
+- rayado: boolean
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>200</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>380</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element></diagram>
