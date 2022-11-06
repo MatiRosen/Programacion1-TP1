@@ -1,0 +1,35 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>30</x><y>120</y><w>190</w><h>110</h></coordinates><panel_attributes>Aplicacion
+--
+- nombre: String
+--
++ eliminarTicket(int): Ticket
++ cantTicketsXSectorPrioridad(): int[][]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>120</y><w>140</w><h>90</h></coordinates><panel_attributes>Ticket
+--
+- id: int
+- fecha: String
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>290</y><w>140</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Sector
+--
++ RRHH
++ INSTITUTO
++ ESCUELA
++ DIRECCION
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>310</y><w>140</w><h>90</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Prioridad
+--
++ ALTA
++ MEDIA
++ BAJA</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>200</y><w>110</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- sector</panel_attributes><additional_attributes>80;90;80;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>200</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- prioridad</panel_attributes><additional_attributes>20;110;20;50;70;50;70;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>120</y><w>140</w><h>110</h></coordinates><panel_attributes>ColaTickets
+--
+
+--
++ add(Ticket): void
++ get(): Ticket
++ remove(): Ticket
++ isEmpty(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>170</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>160</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- tickets</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element></diagram>
