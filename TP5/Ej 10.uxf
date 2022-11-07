@@ -1,0 +1,58 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>90</x><y>250</y><w>210</w><h>140</h></coordinates><panel_attributes>MesaElectoral
+--
+
+--
++ generarPadron(): Padron
++ generarRegistroElector(int): RegistroDeElector
+- crearMesas(): ListaOrdenadaMesasPorNum
+- generarElectoresSinMesa(): ListaOrdenadaElectorPorDni</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>250</y><w>210</w><h>140</h></coordinates><panel_attributes>ElectorConMesa
+--
+- numMesa: int
+--
++ generarElectorSinMesa(): Elector</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>250</y><w>290</w><h>140</h></coordinates><panel_attributes>ListaOrdenadaElectorPorDni
+--
+
+--
++ compare(Elector, Elector): int
++ compareByKey(Integer, Elector): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>120</y><w>230</w><h>150</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>210;10;10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>310</y><w>230</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- electoresOrdenados</panel_attributes><additional_attributes>210;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>540</y><w>220</w><h>100</h></coordinates><panel_attributes>ListaOrdenadaMesasPorNum
+--
+
+--
++ compare(Mesa, Mesa): int
++ compareByKey(Integer, Mesa): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>510</y><w>230</w><h>140</h></coordinates><panel_attributes>PadronElectoral
+--
+
+--
++ PadronElectoral(ListaOrdenadaMesasPorNum)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>830</x><y>510</y><w>210</w><h>140</h></coordinates><panel_attributes>Mesa
+--
+- numero: int
+--
++ Mesa(int)
++ agregarElector(Elector): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>570</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- mesasOrdenadas</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>580</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>380</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>50</y><w>210</w><h>140</h></coordinates><panel_attributes>Elector
+--
+- dni: int
+- nombre: String
+- apellido: String
+--
++ Elector(int, String, String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>950</x><y>180</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>70</y><w>220</w><h>140</h></coordinates><panel_attributes>RegistroDeElector
+--
+- dniElector: int
+- numOrden: int
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>380</y><w>190</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- electoresOrdenadosPorDni</panel_attributes><additional_attributes>10;10;10;80;170;80;170;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1240</x><y>520</y><w>220</w><h>140</h></coordinates><panel_attributes>ListaOrdenadaElectorPorNombre
+--
+
+--
++ compare(Elector, Elector): int
++ compareByKey(String, Elector): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1060</x><y>120</y><w>300</w><h>420</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;280;10;280;400</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>380</y><w>380</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- electores</panel_attributes><additional_attributes>350;10;350;100;50;100;50;170;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>200</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>50</x><y>150</y><w>910</w><h>600</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- mesa</panel_attributes><additional_attributes>880;500;880;580;10;580;10;10;40;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1030</x><y>580</y><w>230</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
+m1=1
+- electoresOrdenadosPorNombre</panel_attributes><additional_attributes>210;20;10;20</additional_attributes></element></diagram>
